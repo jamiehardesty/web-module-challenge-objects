@@ -6,14 +6,14 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
-function createMenuItem(name, cost, category){
+function createMenuItem(name, price, category){
     return{name, price, category};
 }
 
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
 console.log(createMenuItem('parfait', 5, 'Snacks'));
 console.log(createMenuItem('croissant', 3, 'Breakfast'));
-console.log(reateMenuItem('risotto', 12, 'Dinner'));
+console.log(createMenuItem('risotto', 12, 'Dinner'));
 
 
 /* Task 2: You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to your burger object that automatically calculates price given a string as a parameter. 
@@ -26,6 +26,19 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+const burgerT2 = {
+  discount: function(pass){
+    if(pass === "teacher" || pass === "student"){
+      return 13.5;
+    }
+    else{
+      return 16.2
+    }
+  }
+};
+
+console.log(burgerT2.discount("teacher"));//13.5
+console.log(burgerT2.discount("public"));//16.2
 
 
 ///////////////Reviews (MVP)///////////////////
