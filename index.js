@@ -122,9 +122,52 @@ function getLastReview(array) {
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+// const getReviewRate2 = [];
+// for(let i = 0; i < reviews.length; i++){
+//   if(reviews[i].rating === 4 || reviews[i].rating === 4.5){
+//     getReviewRate2.push(reviews[i]);
+//   }
+// }
+// console.log(getReviewRate2); //line 131
+// // the above works but conversion below doesn't
+
+const getReviewRate = [];
+function getRateFinal(array, stars){
+  for(let i = 0; i < array.length; i++){
+    if(array[i].rating === stars + 1 || array[i].rating === stars){
+      getReviewRate.push(array[i]);
+    }
   }
+  return getReviewRate;
+}
+getRateFinal(reviews, 4);
+console.log(getReviewRate);
+// console.log(getReviewRate);
+
+
+
+
+
+/*
+// console.log(reviews:rating());
+ function getReviewByRating(array, key) {
+   if(array.key === 4){
+     return key[i];
+   }else{
+     console.log("No ratings with a value of " + key + " have been found.");
+   }
+ }
+    // arrayRating = [];
+    // for(let i = 0; i < array.length; i++){
+      // if(array[i].includes(rating)){
+        // arrayRating.push(array[i]);
+        // console.log(array[i]);
+    //   }
+    // }
+    // return arrayRating;
+  // }
+console.log(getReviewByRating(reviews, 4));
+  */
 
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
