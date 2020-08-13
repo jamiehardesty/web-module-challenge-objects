@@ -28,10 +28,10 @@ For example, burger.discount("teacher") would return 13.5 and burger.discount("p
 
 const burgerT2 = {
   discount: function(pass){
-    if(pass === "teacher" || pass === "student"){
+    if(pass === "teacher" || pass === "student"){ 
       return 13.5;
     }
-    else{
+    else{// public
       return 16.2
     }
   }
@@ -54,7 +54,7 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
