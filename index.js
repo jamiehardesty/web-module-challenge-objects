@@ -67,7 +67,13 @@ console.log(addOpinions('Dwarf',3,'These taste like they were not made in cast i
 console.log(addOpinions('Elf',2,'Human food is always inferior to our standards of cuisine'));
 console.log(addOpinions('Orc',5,'MORE FOOD NOW. GET AFTER REVIEW. WE SHALL SEE.'));
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
+function addFeedback(array, index, feedback){
+  array[index].feedback = feedback;
+  return array;
+}
+console.log(addFeedback(reviews, 7, 'this place is chill with really cool people, great for getting work done on weekdays'));
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
