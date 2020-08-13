@@ -7,6 +7,7 @@ const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakf
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
 
 function createMenuItem(name, price, category){
+    // array.push({name, price, category})
     return{name, price, category};
 }
 
@@ -57,7 +58,14 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+function addOpinions(name, rating, feedback){
+  // array.push({name, rating, feedback});
+  return {name, rating, feedback};
+}
 
+console.log(addOpinions('Dwarf',3,'These taste like they were not made in cast iron. It is ok if you are into that sorta thing'));
+console.log(addOpinions('Elf',2,'Human food is always inferior to our standards of cuisine'));
+console.log(addOpinions('Orc',5,'MORE FOOD NOW. GET AFTER REVIEW. WE SHALL SEE.'));
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
