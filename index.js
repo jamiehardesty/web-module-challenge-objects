@@ -131,10 +131,10 @@ function getLastReview(array) {
 // console.log(getReviewRate2); //line 131
 // // the above works but conversion below doesn't
 
-const getReviewRate = [];
+const getReviewRate = []; // this NEEDS to be outside to be defined - otherwise I think the {}s block it 
 function getRateFinal(array, stars){
   for(let i = 0; i < array.length; i++){
-    if(array[i].rating === stars + 1 || array[i].rating === stars){
+    if(array[i].rating === stars || array[i].rating === stars + 0.5){
       getReviewRate.push(array[i]);
     }
   }
@@ -142,33 +142,28 @@ function getRateFinal(array, stars){
 }
 getRateFinal(reviews, 4);
 console.log(getReviewRate);
-// console.log(getReviewRate);
-
-
-
-
 
 /*
+// console.log(getReviewRate);
 // console.log(reviews:rating());
- function getReviewByRating(array, key) {
-   if(array.key === 4){
-     return key[i];
-   }else{
-     console.log("No ratings with a value of " + key + " have been found.");
-   }
- }
-    // arrayRating = [];
-    // for(let i = 0; i < array.length; i++){
-      // if(array[i].includes(rating)){
-        // arrayRating.push(array[i]);
-        // console.log(array[i]);
-    //   }
-    // }
-    // return arrayRating;
-  // }
+function getReviewByRating(array, key) {
+if(array.key === 4){
+return key[i];
+}else{
+console.log("No ratings with a value of " + key + " have been found.");
+}
+}
+// arrayRating = [];
+// for(let i = 0; i < array.length; i++){
+// if(array[i].includes(rating)){
+// arrayRating.push(array[i]);
+// console.log(array[i]);
+//   }
+// }
+// return arrayRating;
+// }
 console.log(getReviewByRating(reviews, 4));
-  */
-
+*/
   
 /** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
@@ -183,30 +178,60 @@ and should return an array of objects.
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
 */
-  function getLongReviews(/* code here */) {
-    /* code here */
+
+const rfs3 = reviews[3].feedback.split(" "); // want
+const rfs4 = reviews[4].feedback.split(" "); // want 
+const rfs5 = reviews[5].feedback.split(" "); // want 
+const rfs7 = reviews[7].feedback.split(" "); // want
+console.log("This returns whether or not the above is written correctly for passing in later: " + Boolean(rfs3.length >= 15));
+// ^^^ what I want v. what I get: undefined
+
+// arr[i].feedback.split // matches index; 7
+// arr[i].feedback.split("") // counts letters; 49
+
+const getLongArrays = [];
+// function getLongReviews(arr, minWordCount) {
+  function getLongReviews(arr) {
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i].feedback.length >= 15){
+      getLongArrays = push.arr[i];
+      // return arr[i]; // returns nothing!
+    }
   }
+  // return arr[i]; // returns nothing!
+}
+// getLongReviews(reviews); // returns nothing!
+console.log(getLongReviews(reviews));
+
+/** STRETCH 2: Write a function called 'getLongestReview' that returns an array containing all reviews longer than 15 words. 
   
+Your function should accept: 
+  (1) An array of objects
+and should return an array of objects. 
+  For example, invoking getLongReviews(reviews) would return [
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
+    {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }]
+*/
+function getLongReviews(/* code here */) {
+  /* code here */
+}
+
 
 /* STRETCH 3:  This challenge is not related to the data above! 
-
 Write a function called carMarker 
-
 Your function should accept:
-
 (1) a single odometer argument (a number) 
-
 and return an object.
-
 The returned object should have the following characteristics:
-     it has an `odometer` property that contains the argument passed in.
-     it has a `drive` method that takes a distance as its argument, and
-         (1) causes the odometer in the object to be increased by the distance,
-         (2) returns the updated value of the `odometer`.
+   it has an `odometer` property that contains the argument passed in.
+   it has a `drive` method that takes a distance as its argument, and
+       (1) causes the odometer in the object to be increased by the distance,
+       (2) returns the updated value of the `odometer`.
 */
 
 
 function carMaker(/* code here */) {
-    /* code here */
-    
+  /* code here */
+  
 }
